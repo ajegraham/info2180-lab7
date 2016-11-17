@@ -3,7 +3,7 @@ $(document).ready(function(){
     var cBox = $("#all");
     
     butt.click(function(){
-        if($(cBox.is(":checked"))){
+        if(cBox.is(":checked")){
             $.ajax({
                 type: "GET",
                 url: "world.php",
@@ -27,6 +27,6 @@ $(document).ready(function(){
                     $("#result").html(text);
                 }
             });
-        };
+        }
     });
 });

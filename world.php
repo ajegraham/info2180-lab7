@@ -9,9 +9,8 @@ $all = $_GET['a'];
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 $search = $conn->query("SELECT * FROM countries");
-
+$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 
 
 if($country == NULL && $all == false){
